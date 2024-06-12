@@ -1,6 +1,10 @@
 .main-content {
   padding: 40px 0 105px;
 
+  @include desktop {
+    padding: 40px 0;
+  }
+
   & .container {
     display: flex;
     flex-wrap: wrap;
