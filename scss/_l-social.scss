@@ -1,12 +1,28 @@
 .social {
   flex: 0 0 400px;
+  order: 3;
+  display: flex;
+  flex-direction: column;
   max-height: 520px;
+
+  @include laptop {
+    flex: 1 1 40%;
+    order: 1;
+  }
+
+  @include mobile {
+    flex: 1 1 100%;
+  }
 
   &__links {
     margin: 0 0 10px;
     padding: 16px;
     border-radius: 20px;
     background-color: #2e2d2a;
+
+    @include mobile {
+      margin: 0;
+    }
 
     &-title {
       margin: 0 0 10px;
@@ -20,8 +36,10 @@
     &-wrapper {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 28px;
+      justify-content: space-between;
+      gap: 8px;
+      max-width: 326px;
+      margin: 0 auto;
     }
   }
 
@@ -29,6 +47,19 @@
     display: inline-block;
     width: 60px;
     height: 60px;
+    background-size: 60px;
+
+    @include tablet {
+      width: 54px;
+      height: 54px;
+      background-size: 54px;
+    }
+
+    @include mobile {
+      width: 60px;
+      height: 60px;
+      background-size: 60px;
+    }
 
     &_tg {
       background-image: url(../assets/tg.svg);
@@ -48,9 +79,18 @@
   }
 
   &__qr {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      display: none;
+    }
+
     &-image {
       display: block;
-      max-height: 100%;
+      max-width: 100%;
     }
   }
 }

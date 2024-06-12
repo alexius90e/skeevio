@@ -61,6 +61,11 @@ img {
     padding: 40px 0;
   }
 }
+@media (max-width: 576px) {
+  .main-content {
+    padding: 20px 0 0;
+  }
+}
 .main-content .container {
   display: flex;
   flex-wrap: wrap;
@@ -69,11 +74,22 @@ img {
 
 .skeeev {
   flex: 0 0 400px;
+  order: 0;
   min-height: 520px;
   padding: 5px;
   box-sizing: border-box;
   border-radius: 20px;
   background-color: #d9d8d0;
+}
+@media (max-width: 992px) {
+  .skeeev {
+    flex: 1 1 40%;
+  }
+}
+@media (max-width: 576px) {
+  .skeeev {
+    min-height: auto;
+  }
 }
 .skeeev__figure {
   margin: 0 0 10px;
@@ -83,6 +99,19 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 20px;
+}
+@media (max-width: 992px) {
+  .skeeev__figure-image {
+    width: 100%;
+    height: 432px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (max-width: 576px) {
+  .skeeev__figure-image {
+    height: 390px;
+  }
 }
 .skeeev__title {
   margin: 0;
@@ -132,13 +161,50 @@ img {
   box-sizing: border-box;
   background-color: #d9d8d0;
 }
+@media (max-width: 992px) {
+  .skeeevfolio {
+    max-width: none;
+  }
+}
+@media (max-width: 576px) {
+  .skeeevfolio {
+    min-height: 386px;
+  }
+}
 .skeeevfolio_nftfolio {
+  order: 1;
   background: url(../assets/nftfolio.jpg) center bottom no-repeat;
   background-color: #d3d9bd;
 }
+@media (max-width: 992px) {
+  .skeeevfolio_nftfolio {
+    order: 2;
+  }
+}
+@media (max-width: 576px) {
+  .skeeevfolio_nftfolio {
+    background-size: 370px;
+  }
+}
 .skeeevfolio_tokenfolio {
+  order: 2;
   background: url(../assets/tokenfolio.jpg) left 50px bottom no-repeat;
   background-color: #f3e9d3;
+}
+@media (max-width: 1240px) {
+  .skeeevfolio_tokenfolio {
+    background-position: center bottom;
+  }
+}
+@media (max-width: 992px) {
+  .skeeevfolio_tokenfolio {
+    order: 3;
+  }
+}
+@media (max-width: 576px) {
+  .skeeevfolio_tokenfolio {
+    background-size: 390px;
+  }
 }
 .skeeevfolio__link {
   display: flex;
@@ -187,11 +253,21 @@ img {
   background: rgba(61, 59, 56, 0.5);
   transition: transform ease-in-out 0.2s;
 }
+@media (max-width: 576px) {
+  .skeeevfolio__token {
+    border-radius: 14px;
+  }
+}
 .skeeevfolio__token:hover {
   transform: translateY(-10px);
 }
 .skeeevfolio__token-figure {
   margin: 0 0 10px;
+}
+@media (max-width: 576px) {
+  .skeeevfolio__token-figure {
+    margin: 0 0 4px;
+  }
 }
 .skeeevfolio__token-figure-image {
   display: block;
@@ -199,14 +275,29 @@ img {
   width: 100%;
   border-radius: 14px;
 }
+@media (max-width: 576px) {
+  .skeeevfolio__token-figure-image {
+    max-width: 90px;
+  }
+}
 .skeeevfolio__token-text {
   display: flex;
   justify-content: space-between;
+  gap: 2px;
   padding: 0 10px 5px;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.04em;
   color: #fff;
+}
+@media (max-width: 576px) {
+  .skeeevfolio__token-text {
+    padding: 0 0 5px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
 }
 .skeeevfolio__token-text::after {
   content: "";
@@ -220,13 +311,32 @@ img {
 
 .social {
   flex: 0 0 400px;
+  order: 3;
+  display: flex;
+  flex-direction: column;
   max-height: 520px;
+}
+@media (max-width: 992px) {
+  .social {
+    flex: 1 1 40%;
+    order: 1;
+  }
+}
+@media (max-width: 576px) {
+  .social {
+    flex: 1 1 100%;
+  }
 }
 .social__links {
   margin: 0 0 10px;
   padding: 16px;
   border-radius: 20px;
   background-color: #2e2d2a;
+}
+@media (max-width: 576px) {
+  .social__links {
+    margin: 0;
+  }
 }
 .social__links-title {
   margin: 0 0 10px;
@@ -239,13 +349,30 @@ img {
 .social__links-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 28px;
+  justify-content: space-between;
+  gap: 8px;
+  max-width: 326px;
+  margin: 0 auto;
 }
 .social__link {
   display: inline-block;
   width: 60px;
   height: 60px;
+  background-size: 60px;
+}
+@media (max-width: 768px) {
+  .social__link {
+    width: 54px;
+    height: 54px;
+    background-size: 54px;
+  }
+}
+@media (max-width: 576px) {
+  .social__link {
+    width: 60px;
+    height: 60px;
+    background-size: 60px;
+  }
 }
 .social__link_tg {
   background-image: url(../assets/tg.svg);
@@ -259,7 +386,18 @@ img {
 .social__link_debank {
   background-image: url(../assets/debank.svg);
 }
+.social__qr {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  .social__qr {
+    display: none;
+  }
+}
 .social__qr-image {
   display: block;
-  max-height: 100%;
+  max-width: 100%;
 }

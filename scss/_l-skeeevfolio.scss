@@ -10,14 +10,44 @@
   box-sizing: border-box;
   background-color: #d9d8d0;
 
+  @include laptop {
+    max-width: none;
+  }
+
+  @include mobile {
+    min-height: 386px;
+  }
+
   &_nftfolio {
+    order: 1;
     background: url(../assets/nftfolio.jpg) center bottom no-repeat;
     background-color: #d3d9bd;
+
+    @include laptop {
+      order: 2;
+    }
+
+    @include mobile {
+      background-size: 370px;
+    }
   }
 
   &_tokenfolio {
+    order: 2;
     background: url(../assets/tokenfolio.jpg) left 50px bottom no-repeat;
     background-color: #f3e9d3;
+
+    @include desktop {
+      background-position: center bottom;
+    }
+
+    @include laptop {
+      order: 3;
+    }
+
+    @include mobile {
+      background-size: 390px;
+    }
   }
 
   &__link {
@@ -71,6 +101,10 @@
     background: rgba(61, 59, 56, 0.5);
     transition: transform ease-in-out 0.2s;
 
+    @include mobile {
+      border-radius: 14px;
+    }
+
     &:hover {
       transform: translateY(-10px);
     }
@@ -78,22 +112,39 @@
     &-figure {
       margin: 0 0 10px;
 
+      @include mobile {
+        margin: 0 0 4px;
+      }
+
       &-image {
         display: block;
         max-width: 170px;
         width: 100%;
         border-radius: 14px;
+
+        @include mobile {
+          max-width: 90px;
+        }
       }
     }
 
     &-text {
       display: flex;
       justify-content: space-between;
+      gap: 2px;
       padding: 0 10px 5px;
       font-weight: 700;
       font-size: 18px;
       letter-spacing: 0.04em;
       color: #fff;
+
+      @include mobile {
+        padding: 0 0 5px;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        color: #fff;
+      }
 
       &::after {
         content: '';
