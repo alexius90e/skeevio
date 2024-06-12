@@ -358,6 +358,8 @@ img {
   display: inline-block;
   width: 60px;
   height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: 60px;
 }
 @media (max-width: 768px) {
