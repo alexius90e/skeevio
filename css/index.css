@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #181d42;
+  background-color: #1a1a19;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Yantramanav", sans-serif;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+.footer__link {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #8e8e8d;
+}
+
+.main-content {
+  padding: 40px 0 105px;
+}
+.main-content .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skeeev {
+  flex: 0 0 400px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #d9d8d0;
+}
+.skeeev__figure {
+  margin: 0 0 10px;
+}
+.skeeev__figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+.skeeev__title {
+  margin: 0;
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  color: #000;
+}
+.skeeev__token {
+  padding: 0 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.skeeev__token-code {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
+.skeeev__token-button {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  padding: 0;
+  border: none;
+  background: url(../assets/copy-icon.svg) center no-repeat;
+  cursor: pointer;
+}
+.skeeev__token-link {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background: url(../assets/token-link-icon.svg) center no-repeat;
+  cursor: pointer;
+}

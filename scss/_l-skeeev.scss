@@ -1,0 +1,58 @@
+.skeeev {
+  flex: 0 0 400px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #d9d8d0;
+
+  &__figure {
+    margin: 0 0 10px;
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0.04em;
+    color: #000;
+  }
+
+  &__token {
+    padding: 0 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    &-code {
+      font-weight: 700;
+      font-size: 16px;
+      color: #000;
+    }
+
+    &-button {
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      padding: 0;
+      border: none;
+      background: url(../assets/copy-icon.svg) center no-repeat;
+      cursor: pointer;
+    }
+
+    &-link {
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      background: url(../assets/token-link-icon.svg) center no-repeat;
+      cursor: pointer;
+    }
+  }
+}
