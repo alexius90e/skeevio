@@ -1,0 +1,56 @@
+.social {
+  flex: 0 0 400px;
+  max-height: 520px;
+
+  &__links {
+    margin: 0 0 10px;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #2e2d2a;
+
+    &-title {
+      margin: 0 0 10px;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      color: #fff;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+
+    &_tg {
+      background-image: url(../assets/tg.svg);
+    }
+
+    &_x {
+      background-image: url(../assets/x.svg);
+    }
+
+    &_inst {
+      background-image: url(../assets/insta.svg);
+    }
+
+    &_debank {
+      background-image: url(../assets/debank.svg);
+    }
+  }
+
+  &__qr {
+    &-image {
+      display: block;
+      max-height: 100%;
+    }
+  }
+}
